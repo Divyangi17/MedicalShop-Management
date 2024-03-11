@@ -1,0 +1,13 @@
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\bin\Debug\MedicalShop Management.exe.config
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\bin\Debug\MedicalShop Management.exe
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\bin\Debug\MedicalShop Management.pdb
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\bin\Debug\MedicalShop Management.xml
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop Management.vbproj.AssemblyReference.cache
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop_Management.Form1.resources
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop_Management.Resources.resources
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop_Management.Products.resources
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop Management.vbproj.GenerateResource.cache
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop Management.vbproj.CoreCompileInputs.cache
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop Management.exe
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop Management.xml
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop Management.pdb
