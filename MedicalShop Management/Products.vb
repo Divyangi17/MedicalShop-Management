@@ -73,17 +73,80 @@ Public Class Products
         Try
             connection.Open()
             Dim qry As New String("INSERT INTO TBL_PRODUCT" &
-            "(PRODUCT_ID, PRODUCT_NAME, PRODUCT_DETAIL, PRODUCT_PRICE, PRODUCT_IMAGE) VALUES" &
-            "(?,?,?,?,?)")
+            "(PRODUCT_ID, PRODUCT_NAME, PRODUCT_DETAIL, PRODUCT_PRICE, PRODUCT_IMAGE, PRODUCT_QTY) VALUES" &
+            "(?,?,?,?,?,?)")
             Dim command As New OleDbCommand(qry, connection)
-
-
 
             command.Parameters.AddWithValue("?", CInt(TextBox1.Text))
             command.Parameters.AddWithValue("?", TextBox2.Text)
             command.Parameters.AddWithValue("?", TextBox3.Text)
             command.Parameters.AddWithValue("?", CInt(TextBox4.Text))
             command.Parameters.AddWithValue("?", TextBox5.Text)
+            command.Parameters.AddWithValue("?", CInt(TextBox6.Text))
+
+            Dim res = command.ExecuteNonQuery()
+
+            If (res >= 1) Then
+                'MsgBox("Data inserted")
+                fillDataGridView()
+            End If
+
+
+            connection.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        End Try
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If PictureBox1.Image IsNot Nothing Then
+            Dim debugFolderPath As String = Path.GetDirectoryName(Application.ExecutablePath)
+            Dim imagePath As String = Path.Combine(debugFolderPath, TextBox5.Text)
+            PictureBox1.Image.Save(imagePath)
+            MessageBox.Show("Image saved to project folder.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            MessageBox.Show("No image loaded to save.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        Try
+            connection.Open()
+            Dim qry As New String("Update TBL_PRODUCT" &
+            "SET PRODUCT_NAME=?, PRODUCT_DETAIL=?, PRODUCT_PRICE=?, PRODUCT_IMAGE=? WHERE PRODUCT_ID=?")
+            Dim command As New OleDbCommand(qry, connection)
+
+            command.Parameters.AddWithValue("?", TextBox2.Text)
+            command.Parameters.AddWithValue("?", TextBox3.Text)
+            command.Parameters.AddWithValue("?", CInt(TextBox4.Text))
+            command.Parameters.AddWithValue("?", TextBox5.Text)
+            command.Parameters.AddWithValue("?", CInt(TextBox6.Text))
+            command.Parameters.AddWithValue("?", CInt(TextBox1.Text))
+
+            Dim res = command.ExecuteNonQuery()
+
+            If (res >= 1) Then
+                'MsgBox("Data inserted")
+                fillDataGridView()
+            End If
+
+            connection.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        End Try
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Try
+            connection.Open()
+            Dim qry As New String("DELETE FROM TBL_PRODUCT" &
+            " WHERE PRODUCT_ID=?")
+            Dim command As New OleDbCommand(qry, connection)
+
+            command.Parameters.AddWithValue("?", CInt(TextBox1.Text))
 
             Dim res = command.ExecuteNonQuery()
 

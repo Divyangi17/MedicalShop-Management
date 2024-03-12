@@ -38,6 +38,8 @@ Partial Class Products
         Me.Button4 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -173,11 +175,29 @@ Partial Class Products
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(214, 315)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(182, 26)
+        Me.TextBox6.TabIndex = 15
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(72, 321)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(127, 20)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Product Quantity"
+        '
         'Products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1123, 798)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.PictureBox1)
@@ -218,4 +238,6 @@ Partial Class Products
     Friend WithEvents Button4 As Button
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label5 As Label
 End Class

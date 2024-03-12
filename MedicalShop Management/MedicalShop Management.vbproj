@@ -101,6 +101,12 @@
     <Compile Include="Products.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Sell.Designer.vb">
+      <DependentUpon>Sell.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sell.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Products.resx">
       <DependentUpon>Products.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sell.resx">
+      <DependentUpon>Sell.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

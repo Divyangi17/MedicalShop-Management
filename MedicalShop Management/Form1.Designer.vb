@@ -24,7 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ProductsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SellToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReortsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LastMonthToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,7 +34,7 @@ Partial Class Form1
         '
         Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductsToolStripMenuItem, Me.StockToolStripMenuItem, Me.SellToolStripMenuItem, Me.ReortsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductsToolStripMenuItem, Me.SellToolStripMenuItem, Me.ReortsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1567, 33)
@@ -47,12 +46,6 @@ Partial Class Form1
         Me.ProductsToolStripMenuItem.Name = "ProductsToolStripMenuItem"
         Me.ProductsToolStripMenuItem.Size = New System.Drawing.Size(98, 29)
         Me.ProductsToolStripMenuItem.Text = "Products"
-        '
-        'StockToolStripMenuItem
-        '
-        Me.StockToolStripMenuItem.Name = "StockToolStripMenuItem"
-        Me.StockToolStripMenuItem.Size = New System.Drawing.Size(71, 29)
-        Me.StockToolStripMenuItem.Text = "Stock"
         '
         'SellToolStripMenuItem
         '
@@ -92,7 +85,6 @@ Partial Class Form1
 
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ProductsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StockToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SellToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReortsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LastMonthToolStripMenuItem As ToolStripMenuItem
