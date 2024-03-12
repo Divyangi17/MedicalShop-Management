@@ -8,9 +8,18 @@ Public Class Sell
                                              "password=dev4; User id=dev; " +
                                              "Provider=ORAOLEDB.Oracle")
         connection = New OleDbConnection(connection_string)
+        ds = New DataSet
 
         fillProducts()
+        fillBillsTable()
         addColumnsToDG2()
+    End Sub
+
+    Private Sub fillBillsTable()
+        Dim dataAdapter As New OleDbDataAdapter _
+                    ("Select * from TBL_BILL", connection)
+        dataAdapter.Fill(ds, "bill")
+        DataGridView2.DataSource = ds.Tables("bill")
     End Sub
 
     Private Sub addColumnsToDG2()
@@ -20,7 +29,7 @@ Public Class Sell
     End Sub
 
     Private Sub fillProducts()
-        ds = New DataSet
+
         Dim dataAdapter As New OleDbDataAdapter _
                     ("Select * from TBL_PRODUCT", connection)
         dataAdapter.Fill(ds, "product")
@@ -50,4 +59,40 @@ Public Class Sell
         txt_total_amt.Text = (CInt(txt_total_amt.Text) + (dr("PRODUCT_PRICE") * CInt(TextBox3.Text))).ToString
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'Try
+        '    connection.Open()
+        '    Dim qry As New String("INSERT INTO TBL_BILL" &
+        '    "(BILL_ID, CUSTOMER_NAME, CUSTOMER_CONTACT, BILL_DATE, TOTAL_AMOUNT) VALUES" &
+        '    "(?,?,?,?,?)")
+
+        '    Dim command As New OleDbCommand(qry, connection)
+
+        '    command.Parameters.AddWithValue("?", CInt(txt_id.Text))
+        '    command.Parameters.AddWithValue("?", txt_cname.Text)
+        '    command.Parameters.AddWithValue("?", txt_contact.Text)
+        '    command.Parameters.AddWithValue("?", DateTimePicker1.Value.ToString("yyyy-MM-dd"))
+        '    command.Parameters.AddWithValue("?", CInt(txt_total_amt.Text))
+
+        '    Dim res = command.ExecuteNonQuery()
+
+        '    If (res >= 1) Then
+        '        'MsgBox("Data inserted")
+        '        fillBillsTable()
+        '    End If
+        '    '***********Now add Bill Detail************************
+
+        '    connection.Close()
+
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+
+        'End Try
+
+        For Each row As DataRow In ds.Tables("product").Rows
+            MsgBox(row("PRODUCT_ID") & "-->" & row("PRODUCT_NAME"))
+        Next
+
+
+    End Sub
 End Class
