@@ -12,3 +12,4 @@ C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\De
 C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop Management.xml
 C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop Management.pdb
 C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop_Management.Sell.resources
+C:\Users\divya\source\repos\MedicalShop Management\MedicalShop Management\obj\Debug\MedicalShop_Management.Login.resources
