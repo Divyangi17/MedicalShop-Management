@@ -163,4 +163,13 @@ Public Class Products
 
         End Try
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            If TextBox7.Text = row.Cells(1).Value Then
+                MsgBox("At row =" & row.Index.ToString)
+            End If
+        Next
+
+    End Sub
 End Class
